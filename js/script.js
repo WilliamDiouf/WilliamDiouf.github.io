@@ -4,6 +4,7 @@ $(document).ready(function() {
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
+		
 		success : function(data) {
 			$('#bitcoin_block_number').append(data.height);
 		},
