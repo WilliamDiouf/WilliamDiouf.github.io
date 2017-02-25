@@ -5,6 +5,7 @@ html, body {
  }
 body {
  background-color: white; 
+ background-image:url(images/image_de_fond.png);
  font-family: Verdana, sans-serif; 
  font-size: 100%;
  }
