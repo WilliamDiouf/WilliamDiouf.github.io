@@ -1,17 +1,13 @@
 
 html, 
-
-body {
- margin: 0;
- padding: 0;
- background-image:url(images/bitcoin-perfecthue.jpg);
- background-size:cover;
- }
 body {
  background-image:url(images/bitcoin-perfecthue.jpg);
  background-size:cover;
  font-family: Verdana, sans-serif; 
  font-size: 100%;
+ margin: 0;
+ padding: 0;
+ background-image:url(images/bitcoin-perfecthue.jpg);
  }
 h1 {
  font-size: 200%; 
