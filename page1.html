@@ -1,28 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+<html>
+<head>
+    
+    <title>BTC USD: Bitcoin au Dollar US Le prix de marché - Blockchain</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://blockchain.info/Resources/overrides.min.css?1492510018">
+    <link rel="stylesheet" href="https://blockchain.info/Resources/css/blockchain.css?1492510018">
 
-    <!-- Bootstrap -->
-    <link href="css/style.css" rel="stylesheet">
+    <script src="https://blockchain.info/Resources/js/jquery.min.js?1492510018" type="text/javascript"></script>
+    <script type="text/javascript" src="https://blockchain.info/Resources/js/bootstrap.min.js?1492510018"></script>
+    <script type="text/javascript" src="https://blockchain.info/Resources/js/shared.min.js?1492510018"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://blockchain.info/Resources/analytics.js?1492510018"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <script type="text/javascript" src="/charts/assets/language.js?1492510018"></script>
+    <link rel="stylesheet" href="/charts/assets/charts.css?1492510018">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    <link rel="alternate" href="https://blockchain.info/id/charts/market-price" hreflang="id">
+    <link rel="alternate" href="https://blockchain.info/ms/charts/market-price" hreflang="ms">
+    <link rel="alternate" href="https://blockchain.info/da/charts/market-price" hreflang="da">
+    <link rel="alternate" href="https://blockchain.info/de/charts/market-price" hreflang="de">
+    <link rel="alternate" href="https://blockchain.info/charts/market-price" hreflang="en">
+    <link rel="alternate" href="https://blockchain.info/es/charts/market-price" hreflang="es">
+    <link rel="alternate" href="https://blockchain.info/fr/charts/market-price" hreflang="fr">
+    <link rel="alternate" href="https://blockchain.info/it/charts/market-price" hreflang="it">
+    <link rel="alternate" href="https://blockchain.info/hu/charts/market-price" hreflang="hu">
+    <link rel="alternate" href="https://blockchain.info/nl/charts/market-price" hreflang="nl">
+    <link rel="alternate" href="https://blockchain.info/no/charts/market-price" hreflang="no">
+    <link rel="alternate" href="https://blockchain.info/pl/charts/market-price" hreflang="pl">
+    <link rel="alternate" href="https://blockchain.info/pt/charts/market-price" hreflang="pt">
+    <link rel="alternate" href="https://blockchain.info/ro/charts/market-price" hreflang="ro">
+    <link rel="alternate" href="https://blockchain.info/sl/charts/market-price" hreflang="sl">
+    <link rel="alternate" href="https://blockchain.info/fi/charts/market-price" hreflang="fi">
+    <link rel="alternate" href="https://blockchain.info/sv/charts/market-price" hreflang="sv">
+    <link rel="alternate" href="https://blockchain.info/vi/charts/market-price" hreflang="vi">
+    <link rel="alternate" href="https://blockchain.info/tr/charts/market-price" hreflang="tr">
+    <link rel="alternate" href="https://blockchain.info/el/charts/market-price" hreflang="el">
+    <link rel="alternate" href="https://blockchain.info/ru/charts/market-price" hreflang="ru">
+    <link rel="alternate" href="https://blockchain.info/bg/charts/market-price" hreflang="bg">
+    <link rel="alternate" href="https://blockchain.info/hi/charts/market-price" hreflang="hi">
+    <link rel="alternate" href="https://blockchain.info/th/charts/market-price" hreflang="th">
+    <link rel="alternate" href="https://blockchain.info/zh-cn/charts/market-price" hreflang="zh-cn">
+    <link rel="alternate" href="https://blockchain.info/zh-tw/charts/market-price" hreflang="zh-tw">
+    <link rel="alternate" href="https://blockchain.info/ja/charts/market-price" hreflang="ja">
+    <link rel="alternate" href="https://blockchain.info/ko/charts/market-price" hreflang="ko">
+    
+
+    
+    <script type="text/javascript" src="/charts/assets/highcharts.js?1492510018"></script>
+    <script type="text/javascript" src="/charts/assets/charts-common.js?1492510018"></script>
+    <script type="text/javascript" src="/charts/assets/charts.js?1492510018"></script>
+
+    <script type="text/javascript" src="/charts/assets/exporting.js?1492510018"></script>
+    <script type="text/javascript" src="/charts/assets/canvas-tools.js?1492510018"></script>
+    <script type="text/javascript" src="/charts/assets/jspdf.min.js?1492510018"></script>
+
+    <script type="text/javascript" src="/charts/assets/highcharts-export-clientside.js?1492510018"></script>
+
+    <link href="https://blockchain.info/market-price" rel="canonical" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@Blockchain" />
+    <meta name="twitter:site" content="@Blockchain" />
+    <meta name="twitter:title" content="Market Price (USD)" />
+    <meta name="twitter:description" content="Average USD market price across major bitcoin exchanges." />
+    <meta name="twitter:image" content="http://charts-previews.traefik.service.consul/charts/previews/s-t/market-price.png?start=1461592081&lang=fr" />
+
+    <meta property="og:site_name" content="Blockchain.info" />
+    <meta property="og:rich_attachment" content="true" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:profile_id" content="360193500679903" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image" content="http://charts-previews.traefik.service.consul/charts/previews/s-f/market-price.png?start=1461592081&lang=fr" />
+    <meta property="og:description" content="Average USD market price across major bitcoin exchanges." />
+    <meta property="og:title" content="Market Price (USD)" />
+
+
+    
+    <meta name="description" content="Trouvez le live BTC à USD prix, ainsi qu&#39;une carte du bitcoin historique au prix du marché en dollars américains à ce jour. Trouver les cartes de Bitcoin live à Blockchain">
+    
+
+</head>
+<body class="charts" data-endpoint="https://api.blockchain.info/" data-lang="fr" style="padding-bottom: 0px">
+    <div role="navigation" class="navbar navbar-default navbar-inverse bc-header bc-public-header" style="border-radius:0px; border: 0px; z-index: 1;">
+        <div class="container container-fluid">
+            <div class="navbar-header flex-between">
+                <a class="navbar-brand" href="/"><img id="logo" border="0" src="https://blockchain.info/Resources/white-blockchain.svg" alt="Explorateur de bloc bitcoin et statistiques monétaires"/></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1" aria-expanded="false" style="border:none;background:transparent;">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse bg-blue" id="navbar-1" style="border:none;">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="item"><a href="/wallet" class="upper" title="Portefeuille Bictoin">Portefeuille</a></li>
+                    <li class="item"><a href="/charts" class="upper" title="Graphiques Bitcoin">Graphiques</a></li>
+                    <li class="item"><a href="/stats" class="upper" title="Statistiques Bitcoin">Statistiques</a></li>
+                    <li class="item"><a href="https://markets.blockchain.info" class="upper" title="Places de marchés Bitcoin">Marchés</a></li>
+                    <li class="item"><a href="/api" class="upper" title="Outils pour développeurs Blockchain">API</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm">
+                  <li class="hidden-md">
+                    <form action="/search" method="GET" class="bc-form navbar-search">
+                      <div class="group">
+                        <div class="item search">
+                          <input id="header-search" type="text" placeholder="Search for block hash, transaction, address, etc" name="search">
+                          <i class="icon-search"></i>
+                        </div>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+<div>
+  <div class="container" id="chart_header" style="display:none;">
+      <div class="row">
+          <div class="span6 offset3">
+              <h1 style="text-align: center; margin-top: 0px" id="chart_title">Market Price (USD)</h1>
+              <p style="text-align: center; margin-bottom: 5px" id="chart_subtitle">Average USD market price across major bitcoin exchanges.</p>
+              <p style="text-align: center; margin-bottom: 5px" id="chart_source">Source: blockchain.info</p>
+          </div>
+          <div class="span2 offset1">
+              <div class="btn-group dropdown" style="position: relative; top: 80px;">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                      Export
+                      <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu chart-export" data-chart-selector="#graph_container">
+                      <li class="nav-header" style="text-align: center;">Fixed Size PNG</li>
+                      <li><a href="http://charts-previews.traefik.service.consul/charts/previews/market-price.png?start=1461592081&lang=fr&h=600&w=1200" target="_blank">1200x600</a></li>
+                      <li><a href="http://charts-previews.traefik.service.consul/charts/previews/market-price.png?start=1461592081&lang=fr&h=810&w=1440" target="_blank">1440x810</a></li>
+                      <li><a href="http://charts-previews.traefik.service.consul/charts/previews/market-price.png?start=1461592081&lang=fr&h=405&w=720" target="_blank">720x405</a></li>
+                      <li class="nav-header" style="text-align: center;">Window Size</li>
+                      <li><a href="#" data-type="image/png">PNG</a></li>
+                      <li><a href="#" data-type="image/jpeg">JPEG</a></li>
+                      <li><a href="#" data-type="application/pdf">PDF</a></li>
+                      <li><a href="#" data-type="image/svg+xml">SVG</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container" style="text-align:center;margin: 20px 0px 0px;padding:0px;max-width:none;">
+      <div data-unit="USD" data-period="day" style="width:100%;position:relative;" id="graph_container"></div>
+      <div class="row" id="charterror" style="display:none;">
+          <div class="span4 offset4 alert alert-error text-center" style="margin:0 auto;float:none;">Error loading chart data</div>
+      </div>
+      <div class="row" id="chartloading">
+          <div class="span4 offset4" style="margin:0 auto;float:none;"><img src="/charts/assets/loading-large.gif?1492510018" alt="Loading..." height=50 width=50/></div>
+      </div>
+  </div>
+
+  <div class="hidden-xs" style="position: relative; margin:0px;border-radius:0px;height:40px;width:100%;border: 1px rgb(221, 221, 221); padding-top: 0px">
+      <div class="flex-row">
+          
+          <ul id="periodnormal" style="display: none; float: left;">
+            <li class="dropdown mr-40" style="list-style-type:none;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="f-14">Timespans</span>
+                    <i class="icon-down_arrow f-8"></i>
+                </a>
+                <ul class="dropdown-menu" style="min-width:20px">
+                  <li><a href="?timespan=30days">30 jours</a></li>
+                  <li><a href="?timespan=60days">60 jours</a></li>
+                  <li><a href="?timespan=180days">180 jours</a></li>
+                  <li><a href="?timespan=1year">1 an</a></li>
+                  <li><a href="?timespan=2years">2 ans</a></li>
+                  <li><a href="?timespan=all">De tous les temps</a></li>
+                </ul>
+            </li>
+          </ul>
+          
+          <ul id="periodminute" style="display: none; float: left;">
+            <li class="dropdown mr-40" style="list-style-type:none;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="f-14">Timespans</span>
+                    <i class="icon-down_arrow f-8"></i>
+                </a>
+                <ul class="dropdown-menu" style="min-width:20px">
+                  <li><a href="?timespan=24h">1 Day</a></li>
+                  <li><a href="?timespan=1week">1 Week</a></li>
+                  <li><a href="?timespan=30days">30 jours</a></li>
+                  <li><a href="?timespan=60days">60 jours</a></li>
+                  <li><a href="?timespan=1year">1 an</a></li>
+                  <li><a href="?timespan=all">De tous les temps</a></li>
+                </ul>
+            </li>
+          </ul>
+          
+          <ul>
+            <li class="dropdown mr-40" style="list-style-type:none;">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="f-14">Functions</span>
+                <i class="icon-down_arrow f-8"></i>
+              </a>
+              <ul class="dropdown-menu" style="min-width:20px">
+                <li>
+                    
+                    <a href="?scale=1">Échelle logarithmique</a>
+                    
+                </li>
+                <li>
+                    <a href="#" id="toggleAverage" data-alternate="Valeurs brutes">Moyenne sur 7 jours</a>
+                </li>
+
+                <li>
+                    <a href="#" id="toggleDataPoints" data-alternate="Cacher les points">Afficher les points de données</a>
+                </li>
+
+                <li class="hidden-tablet">
+                    <a href="https://api.blockchain.info/charts/market-price?format=csv">CSV</a><a href="https://api.blockchain.info/charts/market-price?format=json" target="_blank">JSON</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+    <div>
+        <div class="footer pv-40 ph-10">
+            <div class="container">
+                <div class="row upper">
+                  <div class="col-md-3">
+                    <img src="https://blockchain.info/Resources/blockchain-blue.svg" alt="" style="width: 170px;">
+                  </div>
+                  <div class="col-md-2 col-sm-6 col-xs-6">
+                    <p class="primary uppercase ls-label mt-30-mobile">Products</p>
+                    <p><a href="https://blockchain.info/wallet/" class="mrl ls-label uppercase medium-blue">Wallet</a></p>
+                    <p><a href="https://www.blockchain.com/enterprise" class="mrl ls-label uppercase medium-blue">Business</a></p>
+                    <p><a href="https://www.blockchain.com/research" class="mrl ls-label uppercase medium-blue">Research</a></p>
+                    <p><a href="https://blockchain.info" class="mrl ls-label uppercase medium-blue">.Info Explorer</a></p>
+                    <p><a href="https://support.blockchain.com" class="mrl ls-label uppercase medium-blue">Support</a></p>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-6 right-align visible-sm visible-xs mt-30-mobile">
+                    <li class="dropup mr-40" style="list-style-type:none;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="upper f-14">Français</span>
+                            <i class="icon-down_arrow f-8"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="min-width:20px" id="languages_select">
+                            <li><a tabindex="-1" href="https://blockchain.info/id/charts/market-price" data-code="id" title="Indonesian"><span>Bahasa Indonesia</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ms/charts/market-price" data-code="ms" title="Malay"><span>Bahasa Melayu</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/da/charts/market-price" data-code="da" title="Danish"><span>Dansk</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/de/charts/market-price" data-code="de" title="German"><span>Deutsch</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/en/charts/market-price" data-code="en" title="English"><span>English</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/es/charts/market-price" data-code="es" title="Spanish"><span>Español</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/fr/charts/market-price" data-code="fr" title="French"><span>Français</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/it/charts/market-price" data-code="it" title="Italian"><span>Italiano</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/hu/charts/market-price" data-code="hu" title="Hungarian"><span>Magyar</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/nl/charts/market-price" data-code="nl" title="Dutch"><span>Nederlands</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/no/charts/market-price" data-code="no" title="Norwegian"><span>Norsk</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/pl/charts/market-price" data-code="pl" title="Polish"><span>Polski</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/pt/charts/market-price" data-code="pt" title="Portuguese"><span>Português</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ro/charts/market-price" data-code="ro" title="Romanian"><span>Română</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/sl/charts/market-price" data-code="sl" title="Slovenian"><span>Slovenščina</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/fi/charts/market-price" data-code="fi" title="Finnish"><span>Suomi</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/sv/charts/market-price" data-code="sv" title="Swedish"><span>Svenska</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/vi/charts/market-price" data-code="vi" title="Vietnam"><span>Tiếng</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/tr/charts/market-price" data-code="tr" title="Turkish"><span>Türkçe</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/el/charts/market-price" data-code="el" title="Greek"><span>Ελληνικά</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ru/charts/market-price" data-code="ru" title="Russian"><span>Русский</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/bg/charts/market-price" data-code="bg" title="Bulgarian"><span>български език</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/hi/charts/market-price" data-code="hi" title="Hindi"><span>हिन्दी</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/th/charts/market-price" data-code="th" title="Thai"><span>ภาษาไทย</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/zh-cn/charts/market-price" data-code="zh-cn" title="Chinese"><span>中文(简体)</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/zh-tw/charts/market-price" data-code="zh-tw" title="Chinese"><span>中文(繁體)</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ja/charts/market-price" data-code="ja" title="Japanese"><span>日本語</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ko/charts/market-price" data-code="ko" title="Korean"><span>한국어</span></a></li>
+                            
+                        </ul>
+                    </li>
+                  </div>
+                  <div class="col-md-2 col-sm-12 col-xs-12">
+                    <p class="primary uppercase ls-label">Company</p>
+                    <p><a href="https://www.blockchain.com/about" class="mrl ls-label uppercase medium-blue">About</a></p>
+                    <p><a href="https://www.blockchain.com/team" class="mrl ls-label uppercase medium-blue">Team</a></p>
+                    <p><a href="https://www.blockchain.com/careers" class="mrl ls-label uppercase medium-blue">Careers</a></p>
+                    <p><a href="https://www.blockchain.com/interview" class="mrl ls-label uppercase medium-blue">Interviewing</a></p>
+                    <p><a href="https://www.blockchain.com/faq" class="mrl ls-label uppercase medium-blue">FAQ</a></p>
+                  </div>
+                  <div class="col-md-2 col-sm-12 col-xs-12">
+                    <p class="primary uppercase ls-label">News</p>
+                    <p><a href="https://www.blockchain.com/press" class="mrl ls-label uppercase medium-blue">Press</a></p>
+                    <p><a href="https://blog.blockchain.com" class="mrl ls-label uppercase medium-blue">Blog</a></p>
+                  </div>
+                  <div class="col-md-3 right-align hidden-sm hidden-xs">
+                    <li class="dropup mr-40" style="list-style-type:none;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="upper f-14">Français</span>
+                            <i class="icon-down_arrow f-8"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="min-width:20px" id="languages_select">
+                            <li><a tabindex="-1" href="https://blockchain.info/id/charts/market-price" data-code="id" title="Indonesian"><span>Bahasa Indonesia</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ms/charts/market-price" data-code="ms" title="Malay"><span>Bahasa Melayu</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/da/charts/market-price" data-code="da" title="Danish"><span>Dansk</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/de/charts/market-price" data-code="de" title="German"><span>Deutsch</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/en/charts/market-price" data-code="en" title="English"><span>English</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/es/charts/market-price" data-code="es" title="Spanish"><span>Español</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/fr/charts/market-price" data-code="fr" title="French"><span>Français</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/it/charts/market-price" data-code="it" title="Italian"><span>Italiano</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/hu/charts/market-price" data-code="hu" title="Hungarian"><span>Magyar</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/nl/charts/market-price" data-code="nl" title="Dutch"><span>Nederlands</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/no/charts/market-price" data-code="no" title="Norwegian"><span>Norsk</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/pl/charts/market-price" data-code="pl" title="Polish"><span>Polski</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/pt/charts/market-price" data-code="pt" title="Portuguese"><span>Português</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ro/charts/market-price" data-code="ro" title="Romanian"><span>Română</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/sl/charts/market-price" data-code="sl" title="Slovenian"><span>Slovenščina</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/fi/charts/market-price" data-code="fi" title="Finnish"><span>Suomi</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/sv/charts/market-price" data-code="sv" title="Swedish"><span>Svenska</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/vi/charts/market-price" data-code="vi" title="Vietnam"><span>Tiếng</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/tr/charts/market-price" data-code="tr" title="Turkish"><span>Türkçe</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/el/charts/market-price" data-code="el" title="Greek"><span>Ελληνικά</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ru/charts/market-price" data-code="ru" title="Russian"><span>Русский</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/bg/charts/market-price" data-code="bg" title="Bulgarian"><span>български език</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/hi/charts/market-price" data-code="hi" title="Hindi"><span>हिन्दी</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/th/charts/market-price" data-code="th" title="Thai"><span>ภาษาไทย</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/zh-cn/charts/market-price" data-code="zh-cn" title="Chinese"><span>中文(简体)</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/zh-tw/charts/market-price" data-code="zh-tw" title="Chinese"><span>中文(繁體)</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ja/charts/market-price" data-code="ja" title="Japanese"><span>日本語</span></a></li>
+                            <li><a tabindex="-1" href="https://blockchain.info/ko/charts/market-price" data-code="ko" title="Korean"><span>한국어</span></a></li>
+                            
+                        </ul>
+                    </li>
+                  </div>
+                </div>
+              </div>
+              <div class="container type-sm flex-column-reverse-mobile flex-center">
+                <div class="col-md-8 pln pt-60">
+                  <span class="medium-blue mbn upper">2017 Blockchain Luxembourg S.A. All Rights Reserved.
+                    <a class="blue light-bg mrm mlm legal-link" href="https://blockchain.com/privacy">
+                      Privacy
+                    </a>
+                    <a class="blue light-bg mrm legal-link" href="https://blockchain.com/terms">
+                      Terms
+                    </a>
+                    <a class="blue light-bg legal-link" href="https://blockchain.com/legal">
+                      Law Enforcement Guide
+                    </a>
+                  </span>
+                </div>
+
+                <div class="col-md-4 prn pt-60 right-align">
+                  <a href="https://www.facebook.com/blockchain/" target="_blank" rel="noreferrer nofollow">
+                    <img class="social-logo mlm" src="https://blockchain.info/Resources/facebook.png" alt="">
+                  </a>
+                  <a href="https://www.linkedin.com/company/blockchain" target="_blank" rel="noreferrer nofollow">
+                    <img class="social-logo mlm" src="https://blockchain.info/Resources/linkedin.png" alt="">
+                  </a>
+                  <a href="https://twitter.com/blockchain" target="_blank" rel="noreferrer nofollow">
+                    <img class="social-logo mlm" src="https://blockchain.info/Resources/twitter.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+
